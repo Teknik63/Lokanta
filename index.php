@@ -69,10 +69,7 @@
     <script>
         let i = 0;
         let deger = 0;
-        // let img1 = document.querySelector("#img1"); //Adana Kebap
-        // let img2 = document.querySelector("#img2"); //Tavuk Şiş
-        // let img3 = document.querySelector("#img3"); //Kıymalı Pide
-        // let img4 = document.querySelector("#img4"); //Lahmacun
+
         let btn = document.querySelector("#btn");
         let fis = document.querySelector("#fis");
 
