@@ -69,7 +69,10 @@
     <script>
         let i = 0;
         let deger = 0;
-
+        let img1 = document.querySelector("#img1");
+        let img2 = document.querySelector("#img2");
+        let img3 = document.querySelector("#img3");
+        let img4 = document.querySelector("#img4");
 
         let btn = document.querySelector("#btn");
         let fis = document.querySelector("#fis");
