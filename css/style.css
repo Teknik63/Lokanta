@@ -1,0 +1,14 @@
+.img {
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+.img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+
+}
+
+h1 {
+    font-size: 1em;
+}
