@@ -69,6 +69,7 @@
     <script>
         let i = 0;
         let deger = 0;
+        let img1 = document.querySelector("#img1");
 
         let btn = document.querySelector("#btn");
         let fis = document.querySelector("#fis");
