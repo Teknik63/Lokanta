@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<?php //$deneme = "Adana Kebap"; 
+<?php
+$adana = 85;
+$tavukSis = 60;
+$kiymaliPide = 70;
+$lahmacun = 30;
+$pisirim = 3;
+$ic = 2;
 ?>
 
 <body>
@@ -17,19 +23,19 @@
         <div class="row mt-4">
             <div class="col-xl-4">
                 <div class="justify-content-center d-flex">
-                    <img id="img1" class="img img-fluid rounded" src="img/krdnzadana.png" alt="Adana Kebap">
+                    <img id="img1" class="img img-fluid rounded" src="img/krdnzadana.png" alt="Adana Kebap" title="Adana Kebap">
                 </div>
 
             </div>
             <div class="col-xl-4">
                 <div class="justify-content-center d-flex">
-                    <img id="img2" class="img img-fluid rounded" src="img/tavuk-sis.png" alt="Tavuk Şiş">
+                    <img id="img2" class="img img-fluid rounded" src="img/tavuk-sis.png" alt="Tavuk Şiş" title="Tavuk Şiş">
                 </div>
 
             </div>
             <div class="col-xl-4">
                 <div class="justify-content-center d-flex">
-                    <img id="img3" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide">
+                    <img id="img3" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide" title="Kıymalı Pide">
                 </div>
 
             </div>
@@ -39,13 +45,13 @@
         <div class="row mt-4">
             <div class="col-xl-4">
                 <div class="justify-content-center d-flex">
-                    <img id="img4" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun">
+                    <img id="img4" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun" title="Lahmacun">
                 </div>
 
             </div>
             <div class="col-xl-4">
                 <div class="justify-content-center d-flex">
-                    <img id="img5" class="img img-fluid rounded" src="img/tavuk-sis.png" alt="Tavuk Şiş">
+                    <img id="img5" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun Pişirim" title="Lahmacun Pişirim">
                 </div>
 
             </div>
@@ -58,9 +64,19 @@
         </div>
         <!-- 2. Satır Bitti -->
         <div class="row mt-4">
-            <div class="col-xl-12  bg-info ">
+            <div class="col-xl-12 " id="yazdir">
+                <div class=" justify-content-center d-flex ">
+                    <h1>Şanlıurfa Açık Ceza İnfaz Kurumu</h1>
+                </div>
+                <div class=" justify-content-center d-flex ">
+                    <h1>İşyurtları Restaurant Birimi</h1>
+                </div>
                 <div class="row justify-content-center d-flex " id="fis"></div>
-                <div class="justify-content-center d-flex m-2"><button type="button" class="btn btn-warning" id="btn">Yazdır</button></div>
+                <div class="justify-content-around d-flex m-2 align-items-center">
+                    <h1 id="araToplam">Ara Toplam</h1>
+                    <button type="button" class="btn btn-warning" id="btn">Yazdır</button>
+
+                </div>
             </div>
         </div>
 
@@ -69,8 +85,9 @@
     <script>
         let i = 0;
         let deger = 0;
-
-
+        let toplam = 0;
+        let fiyat = 0;
+        let araToplam = 0;
         let btn = document.querySelector("#btn");
         let fis = document.querySelector("#fis");
 
@@ -78,6 +95,8 @@
         let img2Alt = document.getElementById("img2").alt;
         let img3Alt = document.getElementById("img3").alt;
         let img4Alt = document.getElementById("img4").alt;
+        let img5Alt = document.getElementById("img5").alt;
+        let araToplamText = document.getElementById("araToplam");
 
         var img = document.getElementsByTagName("img");
 
@@ -86,15 +105,21 @@
             img[j].addEventListener("click", function() {
                 if (img[j].id == 'img1') {
                     i = 1;
+
                 }
                 if (img[j].id == 'img2') {
                     i = 2;
+
                 }
                 if (img[j].id == 'img3') {
                     i = 3;
+
                 }
                 if (img[j].id == 'img4') {
                     i = 4;
+                }
+                if (img[j].id == 'img5') {
+                    i = 5;
                 }
                 putValue();
                 createBill();
@@ -102,7 +127,9 @@
             });
         }
         btn.onclick = function() {
-            printDiv('fis');
+            btn.classList = 'd-none';
+            printDiv('yazdir');
+
         }
 
         // img1.onclick = function() {
@@ -135,17 +162,28 @@
             h1.classList = "mt-2 mb-2";
             if (i == 1) {
                 h1.textContent = img1Alt;
+                fiyat = <?php echo $adana ?>;
             }
             if (i == 2) {
                 h1.textContent = img2Alt;
+                fiyat = <?php echo $tavukSis ?>;
             }
             if (i == 3) {
                 h1.textContent = img3Alt;
+                fiyat = <?php echo $kiymaliPide ?>;
             }
             if (i == 4) {
                 h1.textContent = img4Alt;
+                fiyat = <?php echo $lahmacun ?>;
             }
-            h1.textContent = h1.textContent + " x " + deger;
+            if (i == 5) {
+                h1.textContent = img5Alt;
+                fiyat = <?php echo $pisirim ?>;
+            }
+            toplam = deger * fiyat;
+            araToplam = araToplam + toplam;
+            h1.textContent = h1.textContent + " x " + deger + ' Adet ' + ' Tutar ' + toplam;
+            araToplamText.innerHTML = "Ödemeniz Gereken Tutar " + araToplam + " TL'dir.";
             div.appendChild(h1);
             divrow.appendChild(div);
             fis.appendChild(divrow);
@@ -153,6 +191,7 @@
 
         function putValue() {
             deger = prompt('Sayı Giriniz', 1);
+
         }
 
         function printDiv(divName) {
