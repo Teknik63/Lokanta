@@ -74,7 +74,8 @@ $ic = 2;
                 <div class="row justify-content-center d-flex " id="fis"></div>
                 <div class="justify-content-around d-flex m-2 align-items-center">
                     <h1 id="araToplam">Ara Toplam</h1>
-                    <button type="button" class="btn btn-warning" id="btn">Yazdır</button>
+                    <button type="button" class="btn btn-warning" id="btnYazdir">Yazdır</button>
+                    <!-- <button type="button" class="btn btn-success" id="btnReset">Sıfırla</button> -->
 
                 </div>
             </div>
@@ -88,7 +89,8 @@ $ic = 2;
         let toplam = 0;
         let fiyat = 0;
         let araToplam = 0;
-        let btn = document.querySelector("#btn");
+        let btnYazdir = document.querySelector("#btnYazdir");
+        // let btnReset = document.querySelector("#btnReset");
         let fis = document.querySelector("#fis");
 
         let img1Alt = document.getElementById("img1").alt;
@@ -126,11 +128,14 @@ $ic = 2;
 
             });
         }
-        btn.onclick = function() {
-            btn.classList = 'd-none';
+        btnYazdir.onclick = function() {
+            btnYazdir.classList = 'd-none';
             printDiv('yazdir');
 
         }
+        // btnReset.onclick = function() {
+        //     location.reload(true);
+        // }
 
         // img1.onclick = function() {
         //     i = 1;
@@ -200,6 +205,7 @@ $ic = 2;
             document.body.innerHTML = printContents;
             window.print();
             document.body.innerHTML = originalContents;
+            location.reload(true);
         }
     </script>
     <script src="js/bootstrap.min.js"></script>
