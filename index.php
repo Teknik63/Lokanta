@@ -20,46 +20,28 @@ $ic = 2;
 <body>
     <div class="container">
         <!-- 1.Satır -->
-        <div class="row mt-4">
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img1" class="img img-fluid rounded" src="img/krdnzadana.png" alt="Adana Kebap" title="Adana Kebap">
-                </div>
-
+        <div class="row mt-4 justify-content-center">
+            <div class="col col-lg cards ">
+                <img id="img1" class="img img-fluid rounded" src="img/krdnzadana.png" alt="Adana Kebap" title="Adana Kebap">
             </div>
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img2" class="img img-fluid rounded" src="img/tavuk-sis.png" alt="Tavuk Şiş" title="Tavuk Şiş">
-                </div>
-
+            <div class="col col-lg cards ">
+                <img id="img2" class="img img-fluid rounded" src="img/tavuk-sis.png" alt="Tavuk Şiş" title="Tavuk Şiş">
             </div>
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img3" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide" title="Kıymalı Pide">
-                </div>
-
+            <div class="col col-lg cards ">
+                <img id="img3" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide" title="Kıymalı Pide">
             </div>
         </div>
         <!-- 1.Satır Bitti -->
         <!-- 2. Satır Başladı -->
-        <div class="row mt-4">
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img4" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun" title="Lahmacun">
-                </div>
-
+        <div class="row mt-2">
+            <div class="col col-lg cards">
+                <img id="img4" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun" title="Lahmacun">
             </div>
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img5" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun Pişirim" title="Lahmacun Pişirim">
-                </div>
-
+            <div class="col col-lg cards">
+                <img id="img5" class="img img-fluid rounded" src="img/lahmacun.png" alt="Lahmacun Pişirim" title="Lahmacun Pişirim">
             </div>
-            <div class="col-xl-4">
-                <div class="justify-content-center d-flex">
-                    <img id="img6" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide">
-                </div>
-
+            <div class="col col-lg cards">
+                <img id="img6" class="img img-fluid rounded" src="img/kiymali-pide.png" alt="Kıymalı Pide">
             </div>
         </div>
         <!-- 2. Satır Bitti -->
